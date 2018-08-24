@@ -1,0 +1,401 @@
+$font: 'Poppins', sans-serif;
+$boldFont: 'Poppins', sans-serif;
+$color: #2020df;
+$fontColor: #30333a;
+
+/* MIXIN border radius for divs*/
+@mixin br {
+    border-radius: 13px 3px 13px 3px;
+    -moz-border-radius: 13px 3px 13px 3px;
+    -webkit-border-radius: 13px 3px 13px 3px;
+    border: 0px solid #2020df;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#burg{
+    width: 100%;
+    background: #8786ee;
+    padding: 7.5px 0 7.5px 2%;
+    a{
+        display: block;
+        width: 70px;
+    } 
+    span{
+        display: flex;
+        margin: 8px;
+        width: 30px;
+        height: 1px;
+        z-index: 999;
+        background: rgb(255, 255, 255);
+    }
+}
+.mobile-tab{
+    display: flex;
+    width: 100%;
+    background: #a7a5ef;
+    flex-direction: column;
+    #mobile{
+        ul{
+            padding: 5% 0;
+            li{
+                list-style: none;
+                margin: 15px 15px;
+                a{
+                    font-size: 1.3em;
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: lighter;
+                    letter-spacing: 1px;
+                    font-family: $font;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (min-width: 960px) {
+    .mobile-tab, #burg, #mobile{
+        display: none;
+    } 
+    .header{
+        display: none;
+    }
+}
+.header{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 960px){
+        display: none;
+    }  
+    .logo{
+        @media screen and (max-width: 1205px) {
+            display: none;
+          }
+        span{
+            color: $color;
+            font-family: $font;
+            margin-left: 143px;
+        }
+    }
+    .menu{
+        ul{
+            display: flex;
+            list-style: none;
+            li{
+                margin-left: 38px;
+                padding: 10px 15px;
+                a{
+                    font-family: $font;
+                    color: $fontColor;
+                    text-decoration: none;
+                }
+                /* menu hover animation*/
+                &:hover{
+                    border-radius: 5px;
+                    border: 1px solid $color;
+                    transition: 0.3s ease;
+                }
+                &:hover > a{
+                    color: $color;
+                    transition: 0.3s ease;
+                }
+            }
+            .getStarted{
+                margin-right: 100px;
+                padding: 10px 15px;
+                background-color: $color;
+                border-radius: 5px;
+                a{
+                    color: #fff;
+                }
+                 /* menu hover animation for get started link*/
+                &:hover{
+                    border: 1px solid $color;
+                    background-color: #fff;
+                    transition: 0.3s ease;
+                }
+                &:hover > a{
+                    color: $fontColor;
+                    transition: 0.3s ease;
+                }
+            }
+        }
+    }
+}
+/*  We make it  */
+.WeMakeIt{
+    position: relative;
+    margin-top: 40px;
+    height: 562px;
+    width: 100%;
+    h1{
+        margin-top: 143px;
+        margin-left: 170px;
+        font-family: $font;
+        font-weight: 600;
+        font-size: 58px;
+    }
+    .tab1{
+        position: absolute;
+        top: 20px;
+        left: 532px;
+    }
+    .tab2{
+        position: absolute;
+        top: 20px;
+        right: 98px;
+    }
+    .simpleCleanCreative{
+        padding-top: 30px;
+        #simpleText{
+            font-family: $font;
+            color: $fontColor;
+            font-size: 19px;
+            margin-left: 170px;
+        }
+    }
+}
+/* Data Analytics */
+.data{
+    margin-top: 38px;
+    margin-left: 150px;
+    h1{
+        display: inline;
+        font-family: $font;
+        font-size: 32px;
+    }
+    p{
+        font-family: $font;
+        font-size: 17px;
+        color: #94949f;
+        margin-top: 25px;
+    }
+    .checkContainer{
+        width: 38px;
+        height: 38px;
+        background-color: $color;
+        display: inline-block;
+        margin-right: 38px;
+        @include br;
+        .checkIcon{
+            color: #fff;
+            margin-top: 11px;
+            margin-left: 11px;
+        }
+    }
+}
+.management{
+    margin-top: 38px;
+    margin-left: 150px;
+    h1{
+        display: inline;
+        font-family: $font;
+        font-size: 32px;
+    }
+    p{
+        font-family: $font;
+        font-size: 17px;
+        color: #94949f;
+        margin-top: 25px;
+    }
+    .checkContainer{
+        width: 38px;
+        height: 38px;
+        background-color: #ecf2ff;
+        display: inline-block;
+        margin-right: 38px;
+        @include br;
+        .checkIcon{
+            color: $color;
+            margin-top: 11px;
+            margin-left: 11px;
+        }
+    }
+}
+.knowledge{
+    margin-top: 38px;
+    margin-left: 150px;
+    h1{
+        display: inline;
+        font-family: $font;
+        font-size: 32px;
+    }
+    p{
+        font-family: $font;
+        font-size: 17px;
+        color: #94949f;
+        margin-top: 25px;
+    }
+    .checkContainer{
+        width: 38px;
+        height: 38px;
+        background-color: #ecf2ff;
+        display: inline-block;
+        margin-right: 38px;
+        @include br;
+        .checkIcon{
+            color: $color;
+            margin-top: 11px;
+            margin-left: 11px;
+        }
+    }
+}
+.dataImg{
+    margin-top: 70px;
+}
+/* Video Section*/
+.videoContainer{
+    margin-top: 170px;
+    h1{
+        font-family: $font;
+        color: $fontColor;
+        font-size: 42px;
+        width: 300px;
+        margin-left: 100px;
+        margin-top: 75px;
+    }
+    p{
+       font-family: $font;
+       font-size: 14px;
+       color: #94949f;
+       width: 300px;
+       margin-top: 50px;
+       margin-left: 100px;
+    }
+    a{
+        text-decoration: none;
+        font-family: $font;
+        font-size: 13px;
+        color: #c3acac;
+        margin-top: 40px;
+        margin-left: 100px;
+    }
+}
+.workingProcess{
+    h1{
+        font-family: $font;
+        color: $fontColor;
+        font-size: 58px;
+        margin-top: 140px;
+    }
+    p{
+        font-family: $font;
+        color: $fontColor;
+        font-size: 19px;
+        margin-top: 33px;
+    }
+}
+
+.workingWidth{
+    width: 230px;
+    .workingContainer{
+        height: 97px;
+        width: 55px;
+        background-color: #ecf2ff;
+        @include br;
+        margin-top: 90px;
+        margin-bottom: 43px;
+        .workingIcon{
+            color: $color;
+            margin-top: 35px;
+            margin-left: 20px;
+        }
+    }
+    h1{
+        font-family: $font;
+        font-size: 42;
+        color: $fontColor;
+        margin-bottom: 40px;
+    }
+    p{
+        font-family: $font;
+        font-size: 17px;
+        color: #94949f;
+    }
+}
+/*Quotes Section*/
+.qouteSection{
+    height: 600px;
+    width: 100%;
+    background-color: #ecf2ff;
+    //#quoteBox{
+    //    width: 520px;
+    //    background-color: rgb(243, 20, 20);
+    //    @include br;
+    //}
+    .quoteIcon{
+        color: #fff;
+    }
+}
+/*Integrats*/
+.brandSection{
+    margin-top: 125px;
+    margin-bottom: 135px;
+    h1{
+        font-family: $font;
+        font-size: 45px;
+        font-weight: bold;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    p{
+        font-family: $font;
+        font-size: 20px;
+        color: #94949f;
+    }
+    .brands{
+        width: 214px;
+        height: 70px;
+        background-color: #ecf2ff;
+        display: inline-block;
+        margin-right: 44px;
+        margin-top: 20px;
+        @include br;
+        p{
+            text-align: center;
+            font-family: $font;
+            font-size: 15px;
+            color: $fontColor;
+            margin-top: 25px;
+        }
+    }
+}
+/*Get in Touch*/
+.getInTouch{
+    height: 234px;
+    width: 90%;
+    background-color: #5271ff;
+    display: flex;
+    margin: 0px auto;
+    h1{
+        font-family: $font;
+        font-size: 45px;
+        color: #fff;
+        margin-left: 100px;
+        margin-top: 75px;
+        @media screen and (max-width: 960px){
+            font-size: 25px;
+        }
+    }
+    #email{
+        margin-left: 214px;
+        color: #fff;
+        text-decoration: none;
+        font-family: $font;
+        font-size: 17px;
+        margin-top: 110px;
+        @media screen and (max-width: 960px){
+            margin-left: 135px;
+        }
+    }
+    @media screen and (max-width: 960px){
+        display: flex;
+        flex-direction: column;
+    }
+}
